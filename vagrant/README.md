@@ -14,7 +14,7 @@ In this exercise we are testing our deployment on our local machine (Linux) usin
 
 Once you are in the your folder of choice, change the configuration details to add your preferred image types and versions, CPU number, Memory size and any shell commands you want to run on your deployed machines.
 
-You can all the Vagrant boxes you can use [here](https://app.vagrantup.com/boxes/search). Adjust the filter to match your interest and speed up the search or simply enter some keywords in the search box.
+You can see all the Vagrant boxes you can use [here](https://app.vagrantup.com/boxes/search). Adjust the filter to match your interest and speed up the search or simply enter some keywords in the search box.
 
 ## 4. Run Vagrantfile
 
@@ -28,7 +28,7 @@ You might need to run this command with sudo depending on how your user groups a
 
 ## 5. Check VMs' state
 
-To check that your VMs are up and running, you can use a tool like virsh by running this command:
+To check if your VMs are up and running, you can use a tool like virsh by running this command:
 
 ```
 sudo virsh list
@@ -74,7 +74,7 @@ To access our VM, we run this command:
 ssh vagrant@192.168.121.237
 ```
 
-If you used a default vagrant box, here the VM login credentials:
+If you used a default vagrant box, here are the VMs login credentials:
 
 - user: `vagrant`
 - password: `vagrant`
