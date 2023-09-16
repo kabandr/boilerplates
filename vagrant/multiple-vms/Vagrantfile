@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"  # You can change this to your preferred Ubuntu version
+
+  (1..5).each do |i|
+    config.vm.define "ubuntu#{i}" do |node|
+      node.vm.provider :libvirt do |libvirt|
+        libvirt.driver = "kvm"
+        libvirt.memory = 1024  # Adjust the memory as needed
+        libvirt.cpus = 1       # Adjust the number of CPUs as needed
+      end
+
+      node.vm.network :private_network, type: "network", bridge: "virbr0", ip: "192.168.122.#{i + 100}"  # Adjust the IP range as needed
+      node.vm.provision "shell", inline: <<-SHELL
+        # Your provisioning script goes here
+        # You can use shell scripts or any other provisioners to configure the VMs
+        # For example, to update packages:
+        sudo apt-get update
+      SHELL
+    end
+  end
+end
