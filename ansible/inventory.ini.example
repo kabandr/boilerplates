@@ -1,0 +1,6 @@
+[ubuntu_vms]
+ubuntu1 ansible_host=192.168.121.151
+ubuntu2 ansible_host=192.168.121.53
+ubuntu3 ansible_host=192.168.121.231
+ubuntu4 ansible_host=192.168.121.248
+ubuntu5 ansible_host=192.168.121.166
